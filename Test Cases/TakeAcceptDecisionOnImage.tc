@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TakeAcceptDecisionOnImage</name>
+   <tag>IA</tag>
+   <comment></comment>
+   <testCaseGuid>d62ef181-5f84-4bf8-93eb-2e59676a3913</testCaseGuid>
+</TestCaseEntity>
