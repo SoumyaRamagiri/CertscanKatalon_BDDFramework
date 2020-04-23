@@ -27,25 +27,28 @@ class IALoginSteps {
 
 	@When("User enters (.*) and (.*)")
 	def enterCredentials(String userName, String pwd){
-		
+
 		WebUI.setText(findTestObject('Object Repository/Page_Login/input_Language localization data unavailabl_e21466'), userName)
 
 		WebUI.setEncryptedText(findTestObject('Object Repository/Page_Login/input_User ID cannot be empty_password'), pwd)
 	}
 	@Then("User clicks on Login")
 	def clickOnLogin(){
-		
+
 		WebUI.click(findTestObject('Object Repository/Page_Login/button_Login'))
-		
 	}
 	@And("Verify logged in User Home page is displaying")
 	def verifyHomePageDisplays(){
-		
+
 		WebUI.waitForElementPresent(findTestObject('Page_Operator Dashboard/span_johnsmith'), 40)
 
 		Assert.assertEquals(driver.getTitle(), 'Operator Dashboard')
 
 		WebUI.verifyTextPresent('OPERATOR', false)
+
+	}
+	@Then("User log outs from application")
+	def logOutOfApplication(){
 
 		WebUI.click(findTestObject('Object Repository/Page_Operator Dashboard/span_johnsmith'))
 
